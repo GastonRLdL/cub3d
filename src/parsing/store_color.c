@@ -6,7 +6,11 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 14:34:07 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/02 14:34:08 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/04/09 14:06:09 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+int store_color(char **split)
+{
+    return (-1);
+}

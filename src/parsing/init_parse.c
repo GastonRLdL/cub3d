@@ -6,13 +6,14 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 14:23:07 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/02 14:32:46 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/04/09 14:09:56 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	parse_data(int fd)
+int	parse_data(int fd)
 {
 	char	*line;
+	char	**split;
 	int		stored;
 
 	stored = 0;
@@ -21,21 +22,14 @@ void	parse_data(int fd)
 		if (stored < 6)
 		{
 			ft_trim(line);
-			if (is_texture(line))
-				store_texture(line);
-			else if (is_color(line))
-				store_color(line);
-			else
-			{
-				free(line);
-				printf("Error en datos\n");
-				return;
-			}
-			stored++;
+			split = ft_split(line, ' ');
 			free(line);
+			line_sorter(split, &stored);
+			if(stored == -1)
+				return(data_error);
 		}
 		else if (stored == 6)
 			parse_map();
-		free(line);
+		double_free(**split, NULL);
 	}
 }
