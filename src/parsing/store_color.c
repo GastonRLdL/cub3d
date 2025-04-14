@@ -6,11 +6,14 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 14:34:07 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/09 14:06:09 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/04/14 14:12:06 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int store_color(char **split)
+#include "../inc/cub3d.h"
+
+int store_color(char **split, t_data data)
 {
+	
     return (-1);
 }

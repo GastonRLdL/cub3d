@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cub3d.h                                            :+:      :+:    :+:   */
+/*   free_data.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/06 14:42:41 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/14 10:36:25 by gasroman         ###   ########.fr       */
+/*   Created: 2025/04/14 10:25:54 by gasroman          #+#    #+#             */
+/*   Updated: 2025/04/14 10:36:48 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CUB3D.H
-# define CUB3D.H
+#include "../inc/cub3d.h"
 
-#include <unistd.h>
-#include <stdio.h>
-#include <fcntl.h>
-#include "color.h"
-
-typedef struct s_data
+void	free_data(t_data *data)
 {
-    char *no;
-    char *so;
-    char *we;
-    char *ea;
-    int floor[4];
-    int ceiling[4];
-} t_data;
-
-#endif
+	if (data->no)
+		free(data->no);
+	if (data->so)
+		free(data->so);
+	if (data->ea)
+		free(data->ea);
+	if (data->we)
+		free(data->we);
+	if (data->floor)
+		free(data->floor);
+	if (data->ceiling)
+		free(data->ceiling);
+}

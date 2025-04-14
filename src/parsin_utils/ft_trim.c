@@ -6,10 +6,11 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 14:46:39 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/06 15:00:13 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/04/14 10:46:44 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../inc/cub3d.h"
 
 char *ft_trim(char *line)
 {
@@ -27,7 +28,7 @@ char *ft_trim(char *line)
 		end--;
 	trimmed = malloc(end - start + 1);
 	if (!trimmed)
-		return(ft_error);
+		return(NULL);
 	while(start <= end)
 		trimmed[i++] = line[start++];
 	trimmed[i] = '\0';

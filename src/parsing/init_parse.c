@@ -6,11 +6,13 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 14:23:07 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/09 14:09:56 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/04/14 10:38:16 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	parse_data(int fd)
+#include "../inc/cub3d.h"
+
+int	parse_data(int fd, t_data *data)
 {
 	char	*line;
 	char	**split;
@@ -24,9 +26,9 @@ int	parse_data(int fd)
 			ft_trim(line);
 			split = ft_split(line, ' ');
 			free(line);
-			line_sorter(split, &stored);
+			data_sorter(split, &stored, data);
 			if(stored == -1)
-				return(data_error);
+				return(-1);
 		}
 		else if (stored == 6)
 			parse_map();

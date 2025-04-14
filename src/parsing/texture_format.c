@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cub3d.h                                            :+:      :+:    :+:   */
+/*   texture_format.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/06 14:42:41 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/14 10:36:25 by gasroman         ###   ########.fr       */
+/*   Created: 2025/04/14 10:59:47 by gasroman          #+#    #+#             */
+/*   Updated: 2025/04/14 14:00:46 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CUB3D.H
-# define CUB3D.H
+#include "../inc/cub3d.h"
 
-#include <unistd.h>
-#include <stdio.h>
-#include <fcntl.h>
-#include "color.h"
-
-typedef struct s_data
+int texture_format(char *filename)
 {
-    char *no;
-    char *so;
-    char *we;
-    char *ea;
-    int floor[4];
-    int ceiling[4];
-} t_data;
+    int len;
 
-#endif
+    len = ft_strlen(filename);
+    if (len < 4)
+        return(0);
+    return(ft_strncmp(!filename + len - 4, ".jpg", 4));
+}
