@@ -6,7 +6,7 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 14:42:41 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/14 10:36:25 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/04/15 13:21:03 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,9 @@ typedef struct s_data
     char *so;
     char *we;
     char *ea;
-    int floor[4];
-    int ceiling[4];
+    int floor;
+    int ceiling;
+    char *map;
 } t_data;
 
 #endif

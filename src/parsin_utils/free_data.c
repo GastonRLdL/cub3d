@@ -6,7 +6,7 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 10:25:54 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/14 10:36:48 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/04/15 13:20:46 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,6 @@ void	free_data(t_data *data)
 		free(data->floor);
 	if (data->ceiling)
 		free(data->ceiling);
+	if (data->map)
+		free(data->map);
 }
