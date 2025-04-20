@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_parse.c                                       :+:      :+:    :+:   */
+/*   parser_data.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/02 14:23:07 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/14 10:38:16 by gasroman         ###   ########.fr       */
+/*   Created: 2025/04/20 15:26:14 by gasroman          #+#    #+#             */
+/*   Updated: 2025/04/20 15:41:11 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
+
 #include "../inc/cub3d.h"
 
-int	parse_data(int fd, t_data *data)
+int	parser_data(int fd, t_data *data)
 {
 	char	*line;
 	char	**split;
@@ -24,7 +26,7 @@ int	parse_data(int fd, t_data *data)
 		if (stored < 6)
 		{
 			ft_trim(line);
-			split = ft_split(line, ' ');
+			split = ft_split_set(line, ' ', '\t');
 			free(line);
 			data_sorter(split, &stored, data);
 			if(stored == -1)

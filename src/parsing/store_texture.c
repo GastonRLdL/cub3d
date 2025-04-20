@@ -6,7 +6,7 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 11:02:14 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/14 11:02:35 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/04/20 15:47:29 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int store_texture(char **split, t_data *data)
 		data->so == ft_strdup(split[1]);
 	else if (!ft_strncp(split[0], "EA", 3) && !data->ea)
 		data->ea == ft_strdup(split[1]);
-	else if (!ft_strncp(split[0], "WS", 3) && !data->we)
+	else if (!ft_strncp(split[0], "WE", 3) && !data->we)
 		data->we == ft_strdup(split[1]);
 	else
 		return(printf("Texture Error\n"), 1);
