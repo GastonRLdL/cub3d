@@ -6,7 +6,7 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 14:42:41 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/15 13:21:03 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/04/21 13:46:52 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,10 @@ typedef struct s_data
     int ceiling;
     char *map;
 } t_data;
+
+int	parser_data(int fd, t_data *data);
+char **process_line(char *line);
+char *ft_trim(char *line);
+
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 13:51:18 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/14 10:37:25 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/04/21 13:24:42 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,8 @@ int data_sorter(char **split, int *stored, t_data *data)
 		}
 		else
 		{
-			double_free(**split, NULL);
-			printf("Error en datos\n");
-			return;
+			free_split(split);
+			return(printf("Data Error\n"), -1);
 		}
     }
     else

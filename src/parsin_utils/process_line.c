@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   process_line.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/02 14:18:54 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/21 13:45:43 by gasroman         ###   ########.fr       */
+/*   Created: 2025/04/21 13:26:30 by gasroman          #+#    #+#             */
+/*   Updated: 2025/04/21 13:29:38 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <fcntl.h>
-#include <stdio.h>
-#include "./inc/cub3d.h"
+#include "../inc/cub3d.h"
 
-int main (int ac, char **av, char *env)
+char **process_line(char *line)
 {
-	int	fd;
-	t_data data;
-
-	if(ac =! 1)
-		return(printf("Argument Error\n"), 1);
-	fd = open(av[1], O_RDONLY);
-	if(fd == -1)
-		return(printf("Open Error\n"), 1);
-	ft_bzero(data, sizeof(t_data));
-	parser_data(fd, data);
-	close(fd);
-	free_data(data);
-	return(0);
+    line = ft_trim(line);
+    if(!line || line[0] == '\'0')
+    {
+        free(line);
+        return(printf("Data Error\n"), -1);
+    }
+    return(ft_split_set(line, ' ', '\t'));
 }

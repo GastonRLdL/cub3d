@@ -6,11 +6,9 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 15:26:14 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/20 15:41:11 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/04/21 13:28:56 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 #include "../inc/cub3d.h"
 
@@ -25,15 +23,14 @@ int	parser_data(int fd, t_data *data)
 	{
 		if (stored < 6)
 		{
-			ft_trim(line);
-			split = ft_split_set(line, ' ', '\t');
+			split = process_line(line);
 			free(line);
 			data_sorter(split, &stored, data);
+			free_split(**split);
 			if(stored == -1)
-				return(-1);
+				return(printf("Data Error\n"), -1);
 		}
 		else if (stored == 6)
 			parse_map();
-		double_free(**split, NULL);
 	}
 }

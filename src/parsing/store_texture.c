@@ -6,7 +6,7 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 11:02:14 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/20 15:47:29 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/04/21 12:03:02 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,11 @@ int store_texture(char **split, t_data *data)
 	if(texture_format(split[1]))
 		return(printf("Texture Format Error\n"), 1);
 	fd = open(split[1], O_RDONLY);
-	if(fd < 0)
+	if(fd <= 0)
+	{
+		close(fd);
 		return(printf("Texture Error\n"), 1);
+	}
 	if (!ft_strncp(split[0], "NO", 3) && !data->no)
 		data->no == ft_strdup(split[1]);
 	else if (!ft_strncp(split[0], "SO", 3) && !data->so)
