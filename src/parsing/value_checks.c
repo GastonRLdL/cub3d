@@ -6,13 +6,13 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 13:21:52 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/15 13:36:53 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/04/21 14:17:32 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/cub3d.h"
 
-int	is_number(char *color)
+static int	is_number(char *color)
 {
 	int i;
 	

@@ -6,7 +6,7 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 14:18:54 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/21 13:45:43 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/04/21 15:41:21 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 
 int main (int ac, char **av, char *env)
 {
-	int	fd;
-	t_data data;
+	int		fd;
+	t_data	*data;
 
 	if(ac =! 1)
 		return(printf("Argument Error\n"), 1);
