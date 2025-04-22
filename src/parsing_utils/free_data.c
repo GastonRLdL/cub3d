@@ -6,13 +6,13 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 10:25:54 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/21 14:14:44 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/04/22 09:08:41 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/cub3d.h"
 
-
+void	free_data(t_data *data)
 {
 	if (data->no)
 		free(data->no);
@@ -29,6 +29,7 @@
 	if (data->map)
 		free(data->map);
 }
+
 void	free_split(char **arr)
 {
 	int	i;

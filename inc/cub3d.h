@@ -6,17 +6,19 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 14:42:41 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/21 15:35:15 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/04/22 09:19:53 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUB3D_H
 # define CUB3D_H
 
-#include <unistd.h>
-#include <stdio.h>
-#include <fcntl.h>
-#include "color.h"
+# include <unistd.h>
+# include <stdio.h>
+# include <fcntl.h>
+# include "color.h"
+# include "../libft/libft.h"
+
 
 typedef struct s_data
 {
