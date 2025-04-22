@@ -6,7 +6,7 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 15:26:14 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/21 13:28:56 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/04/22 10:38:58 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ int	parser_data(int fd, t_data *data)
 		{
 			split = process_line(line);
 			free(line);
-			data_sorter(split, &stored, data);
+			if(data_sorter(split, &stored, data))
+				return(1);
 			free_split(**split);
 			if(stored == -1)
 				return(printf("Data Error\n"), -1);
@@ -33,4 +34,5 @@ int	parser_data(int fd, t_data *data)
 		else if (stored == 6)
 			parse_map();
 	}
+	return(0);
 }

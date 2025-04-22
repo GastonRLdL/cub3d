@@ -6,7 +6,7 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 14:42:41 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/22 09:19:53 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/04/22 10:47:32 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ typedef struct s_data
 } t_data;
 
 int		parser_data(int fd, t_data *data);
+int		data_sorter(char **split, int *stored, t_data *data);
 char	**process_line(char *line);
 char	*ft_trim(char *line);
 char	**ft_split_set(char const *s, char c1, char c2);
