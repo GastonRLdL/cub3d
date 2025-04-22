@@ -6,7 +6,7 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 14:42:41 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/22 10:47:32 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/04/22 12:25:15 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ int		store_texture(char **split, t_data *data);
 int		texture_format(char *filename);
 int		value_checks(char **color);
 int		store_color(char **split, t_data *data);
-
+int		is_texture(char **split);
+int		is_color(char **split);
 
 #endif
