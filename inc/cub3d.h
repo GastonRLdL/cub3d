@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 14:42:41 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/23 12:10:47 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/04/23 12:28:18 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,12 @@
 # include <fcntl.h>
 # include "color.h"
 # include "../libft/libft.h"
+
+enum e_bolean
+{
+	false,
+	true,
+};
 
 typedef struct s_data
 {
