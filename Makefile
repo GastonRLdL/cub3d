@@ -6,13 +6,13 @@
 #    By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/22 08:06:23 by gasroman          #+#    #+#              #
-#    Updated: 2025/04/22 16:09:44 by gasroman         ###   ########.fr        #
+#    Updated: 2025/04/23 07:07:07 by gasroman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # ============================== VARIABLES =================================== #
 
-FLAGS = -Wall -Werror -Wextra -g
+FLAGS = -g
 RMV = rm -rf
 CC = cc
 NAME = cub3D
@@ -53,8 +53,8 @@ all: dir $(NAME)
 -include $(DEPENDENCIES)
 
 dir:
-	-mkdir -p $(DIR_OBJECTS)src/parsing
-	-mkdir -p $(DIR_OBJECTS)src/parsing_utils
+	-mkdir -p $(DIR_OBJECTS)parsing
+	-mkdir -p $(DIR_OBJECTS)parsing_utils
 	@$(MAKE) -C $(LIB_PATH)
 
 $(DIR_OBJECTS)%.o: $(DIR_SOURCES)%.c

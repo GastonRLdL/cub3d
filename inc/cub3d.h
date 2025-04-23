@@ -6,7 +6,7 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 14:42:41 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/22 12:25:15 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/04/23 06:37:26 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int		data_sorter(char **split, int *stored, t_data *data);
 char	**process_line(char *line);
 char	*ft_trim(char *line);
 char	**ft_split_set(char const *s, char c1, char c2);
-void	free_split(char **arr);
+void	free_split(char ***arr);
 void	free_data(t_data *data);
 int		split_size(char **split);
 int		store_texture(char **split, t_data *data);

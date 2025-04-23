@@ -6,7 +6,7 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 10:25:54 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/22 09:08:41 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/04/23 07:26:48 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,11 @@ void	free_data(t_data *data)
 		free(data->ea);
 	if (data->we)
 		free(data->we);
-	if (data->floor)
-		free(data->floor);
-	if (data->ceiling)
-		free(data->ceiling);
 	if (data->map)
 		free(data->map);
 }
 
-void	free_split(char **arr)
+void	free_split(char ***arr)
 {
 	int	i;
 
