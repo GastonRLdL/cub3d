@@ -6,16 +6,16 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 12:35:55 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/09 12:36:46 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/04/23 11:11:02 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int split_size(char **split)
+int	split_size(char **split)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while(split[i])
-        i++;
-    return(i);
+	i = 0;
+	while (split[i])
+		i++;
+	return (i);
 }

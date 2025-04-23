@@ -5,20 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/21 13:26:30 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/23 07:27:59 by gasroman         ###   ########.fr       */
+/*   Created: 2025/04/23 11:07:22 by gasroman          #+#    #+#             */
+/*   Updated: 2025/04/23 11:07:50 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/cub3d.h"
 
-char **process_line(char *line)
+char	**process_line(char *line)
 {
-    line = ft_trim(line);
-    if(!line || line[0] == '\0')
-    {
-        free(line);
-        return(printf("Processing Line Error\n"), NULL);
-    }
-    return(ft_split_set(line, ' ', '\t'));
+	line = ft_trim(line);
+	if (!line || line[0] == '\0')
+	{
+		free(line);
+		return (printf("Processing Line Error\n"), NULL);
+	}
+	return (ft_split_set(line, ' ', '\t'));
 }

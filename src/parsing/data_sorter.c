@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/09 13:51:18 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/23 07:18:28 by gasroman         ###   ########.fr       */
+/*   Created: 2025/04/23 11:02:31 by gasroman          #+#    #+#             */
+/*   Updated: 2025/04/23 11:03:21 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,26 @@
 
 int	data_sorter(char **split, int *stored, t_data *data)
 {
-    if(split_size(split) == 2)
-    {
-        if(is_texture(split))
+	if (split_size(split) == 2)
+	{
+		if (is_texture(split))
 		{
-			if(store_texture(split, data))
-				return(printf("Texture Storing Error\n"), -1);
+			if (store_texture(split, data))
+				return (printf("Texture Storing Error\n"), -1);
 		}
 		else if (is_color(split))
 		{
-			if(store_color(split, data))
-				return(printf("Color Storing Error\n"), -1);
+			if (store_color(split, data))
+				return (printf("Color Storing Error\n"), -1);
 		}
 		else
 		{
 			free_split(&split);
-			return(printf("Data Sorting Error\n"), -1);
+			return (printf("Data Sorting Error\n"), -1);
 		}
 		stored++;
-		if(*stored == 6)
-			return(0);
-    }
-    return(printf("No Data\n"), -1); 
+		if (*stored == 6)
+			return (0);
+	}
+	return (printf("No Data\n"), -1);
 }

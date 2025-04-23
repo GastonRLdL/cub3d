@@ -6,7 +6,7 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 14:42:41 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/23 06:37:26 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/04/23 12:10:47 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,16 @@
 # include "color.h"
 # include "../libft/libft.h"
 
-
 typedef struct s_data
 {
-	char *no;
-	char *so;
-	char *we;
-	char *ea;
-	int floor;
-	int ceiling;
- 	char *map;
-} t_data;
+	char	*no;
+	char	*so;
+	char	*we;
+	char	*ea;
+	int		floor;
+	int		ceiling;
+	char	*map;
+}	t_data;
 
 int		parser_data(int fd, t_data *data);
 int		data_sorter(char **split, int *stored, t_data *data);
@@ -41,6 +40,7 @@ void	free_data(t_data *data);
 int		split_size(char **split);
 int		store_texture(char **split, t_data *data);
 int		texture_format(char *filename);
+int		data_format(char *filename);
 int		value_checks(char **color);
 int		store_color(char **split, t_data *data);
 int		is_texture(char **split);

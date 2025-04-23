@@ -6,7 +6,7 @@
 #    By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/22 08:06:23 by gasroman          #+#    #+#              #
-#    Updated: 2025/04/23 07:07:07 by gasroman         ###   ########.fr        #
+#    Updated: 2025/04/23 12:11:08 by gasroman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ SRC_FILES = main.c \
 			parsing/parser_data.c \
 			parsing/store_color.c  \
 			parsing/store_texture.c  \
-			parsing/texture_format.c \
+			parsing/format_check.c \
 			parsing/value_checks.c \
 			parsing_utils/free_data.c \
 			parsing_utils/ft_split_set.c \

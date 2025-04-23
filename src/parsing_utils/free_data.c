@@ -6,7 +6,7 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 10:25:54 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/23 07:26:48 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/04/23 11:06:36 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	free_split(char ***arr)
 	int	i;
 
 	if (!arr)
-		return;
+		return ;
 	i = 0;
 	while (arr[i])
 		free(arr[i++]);
