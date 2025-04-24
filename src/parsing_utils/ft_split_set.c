@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split_set.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 15:35:54 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/23 11:06:48 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/04/23 13:00:42 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static size_t	w_size(char const *s, int start, char c1, char c2)
 	size_t	size;
 
 	size = 0;
-	while (s[start] && (s[start] != c1 || s[start] != c2))
+	while (s[start] && (s[start] != c1 && s[start] != c2))
 	{
 		size++;
 		start++;
@@ -34,6 +34,7 @@ static int	count_words(char const *s, char c1, char c2)
 	i = 0;
 	words = 0;
 	flag = 0;
+
 	while (s[i])
 	{
 		if ((s[i] != c1 || s[i] != c2) && flag == 0)

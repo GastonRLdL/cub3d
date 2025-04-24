@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/02 14:18:54 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/23 12:11:23 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/04/23 13:06:01 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 int	main(int ac, char **av)
 {
 	int		fd;
-	t_data	*data;
+	static t_data	data;
 
 	if (ac != 2)
 		return (printf("Argument Error\n"), 1);
@@ -26,10 +26,9 @@ int	main(int ac, char **av)
 	fd = open(av[1], O_RDONLY);
 	if (fd == -1)
 		return (printf("Open Error\n"), 1);
-	ft_bzero(&data, sizeof(t_data));
 	printf("Parsing\n");
-	parser_data(fd, data);
+	parser_data(fd, &data);
 	close(fd);
-	free_data(data);
+	// free_data(data);
 	return (0);
 }

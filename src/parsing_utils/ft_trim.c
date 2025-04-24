@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_trim.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 14:46:39 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/23 11:07:07 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/04/23 12:49:15 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_trim(char *line)
 	int		i;
 	char	*trimmed;
 
+	if (!line)
+		return (NULL);
 	start = 0;
 	end = (ft_strlen(line) - 1);
 	i = 0;
@@ -26,12 +28,13 @@ char	*ft_trim(char *line)
 		start++;
 	while (end >> start && (line[end] == ' ' || line[end] == '\t'))
 		end--;
-	trimmed = malloc(end - start + 1);
+	// trimmed = ft_calloc(sizeof(char), end - start + 1);
+	trimmed = malloc(sizeof(char) * (end - start + 1));
 	if (!trimmed)
 		return (NULL);
-	while (start <= end)
+	while (start < end)
 		trimmed[i++] = line[start++];
 	trimmed[i] = '\0';
-	free(line);
+	// free(line);
 	return (trimmed);
 }
