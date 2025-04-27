@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   texture_color.c                                    :+:      :+:    :+:   */
+/*   count_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/23 11:08:13 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/24 14:29:25 by gasroman         ###   ########.fr       */
+/*   Created: 2025/04/25 14:53:05 by gasroman          #+#    #+#             */
+/*   Updated: 2025/04/27 16:42:34 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/cub3d.h"
+#include "../../inc/cub3d.h"
 
-int	is_texture(char **split)
+int	count_map(t_data *data, char *line)
 {
-	if (ft_strncmp(split[0], "NO", 3) == 0 || \
-			ft_strncmp(split[0], "SO", 3) == 0 || \
-			ft_strncmp(split[0], "EA", 3) == 0 || \
-			ft_strncmp(split[0], "WE", 3) == 0)
-		return (true);
-	return (false);
-}
+	static int	j = 0;
 
-int	is_color(char **split)
-{
-	if (ft_strncmp(split[0], "F", 2) == 0 || \
-			ft_strncmp(split[0], "C", 2) == 0)
+	if (j == 0 && line[0] == '\n')
 		return (true);
-	return (false);
+	data->map = \
+		ft_double_realloc(data->map, (j + 2) * sizeof(char *));
+	if (!data->map)
+		return (false);
+	data->map[j] = ft_strdup(line);
+	if (!data->map[j])
+		return (false);
+	j++;
+	return (true);
 }

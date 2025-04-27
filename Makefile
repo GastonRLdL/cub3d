@@ -6,7 +6,7 @@
 #    By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/22 08:06:23 by gasroman          #+#    #+#              #
-#    Updated: 2025/04/23 12:11:08 by gasroman         ###   ########.fr        #
+#    Updated: 2025/04/27 16:19:45 by gasroman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,18 +20,23 @@ NAME = cub3D
 # =============================== SOURCES ==================================== #
 
 SRC_FILES = main.c \
-			parsing/data_sorter.c \
-			parsing/parser_data.c \
-			parsing/store_color.c  \
-			parsing/store_texture.c  \
-			parsing/format_check.c \
-			parsing/value_checks.c \
-			parsing_utils/free_data.c \
-			parsing_utils/ft_split_set.c \
-			parsing_utils/ft_trim.c \
-			parsing_utils/process_line.c \
-			parsing_utils/split_size.c \
-			parsing_utils/texture_color.c
+			parsing/count_map.c					\
+			parsing/data_sorter.c				\
+			parsing/format_check.c				\
+			parsing/is_surrounded.c				\
+			parsing/line_checker.c				\
+			parsing/parser_data.c				\
+			parsing/parser_map.c				\
+			parsing/store_color.c				\
+			parsing/store_texture.c				\
+			parsing/value_checks.c				\
+			parsing_utils/free_data.c 			\
+			parsing_utils/ft_double_realloc.c	\
+			parsing_utils/ft_split_set.c		\
+			parsing_utils/player_count.c		\
+			parsing_utils/process_line.c		\
+			parsing_utils/split_size.c			\
+			parsing_utils/texture_color.c		\
 
 LIB_PATH = ./libft/
 LIB = $(LIB_PATH)libft.a

@@ -6,7 +6,7 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 11:05:26 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/23 12:11:23 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/04/27 16:42:35 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ int	texture_format(char *filename)
 	len = ft_strlen(filename);
 	if (len < 5)
 		return (1);
-	if (filename[len - 4] == '.' && \
-		filename[len - 3] == 'x' && \
-		filename[len - 2] == 'p' && \
-		filename[len - 1] == 'm')
-		return (1);
+	// if (filename[len - 4] == '.' && \
+	// 	filename[len - 3] == 'x' && \
+	// 	filename[len - 2] == 'p' && \
+	// 	filename[len - 1] == 'm')
+	// 	return (1);
 	return (0);
 }
 

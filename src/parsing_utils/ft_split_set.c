@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split_set.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 15:35:54 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/23 13:00:42 by codespace        ###   ########.fr       */
+/*   Updated: 2025/04/25 14:37:06 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static size_t	w_size(char const *s, int start, char c1, char c2)
 	size_t	size;
 
 	size = 0;
-	while (s[start] && (s[start] != c1 && s[start] != c2))
+	while (s[start] && (s[start] != c1 && s[start] != c2 && s[start] != '\n'))
 	{
 		size++;
 		start++;
@@ -34,15 +34,14 @@ static int	count_words(char const *s, char c1, char c2)
 	i = 0;
 	words = 0;
 	flag = 0;
-
 	while (s[i])
 	{
-		if ((s[i] != c1 || s[i] != c2) && flag == 0)
+		if ((s[i] != c1 && s[i] != c2 && s[i] != '\n') && flag == 0)
 		{
 			words++;
 			flag = 1;
 		}
-		else if (s[i] == c1 || s[i] == c2)
+		else if (s[i] == c1 || s[i] == c2 || s[i] == '\n')
 			flag = 0;
 		i++;
 	}
@@ -62,7 +61,7 @@ char	**ft_split_set(char const *s, char c1, char c2)
 	j = 0;
 	while (j < count_words(s, c1, c2))
 	{
-		while (s[i] == c1 || s[i] == c2)
+		while (s[i] == c1 || s[i] == c2 || s[i] == '\n')
 			i++;
 		str[j] = ft_substr(s, i, w_size(s, i, c1, c2));
 		if (!str[j])

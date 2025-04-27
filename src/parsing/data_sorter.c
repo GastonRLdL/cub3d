@@ -6,7 +6,7 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 11:02:31 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/23 11:03:21 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/04/25 14:13:54 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,22 +18,24 @@ int	data_sorter(char **split, int *stored, t_data *data)
 	{
 		if (is_texture(split))
 		{
-			if (store_texture(split, data))
-				return (printf("Texture Storing Error\n"), -1);
+			if (!store_texture(split, data))
+				return ((*stored) = -1);
+			return ((*stored)++);
 		}
 		else if (is_color(split))
 		{
-			if (store_color(split, data))
-				return (printf("Color Storing Error\n"), -1);
+			if (!store_color(split, data))
+				return ((*stored) = -1);
+			return ((*stored)++);
 		}
 		else
 		{
 			free_split(&split);
-			return (printf("Data Sorting Error\n"), -1);
+			return ((*stored) = -1);
 		}
-		stored++;
+		(*stored)++;
 		if (*stored == 6)
-			return (0);
+			return (true);
 	}
-	return (printf("No Data\n"), -1);
+	return ((*stored) = -1);
 }
