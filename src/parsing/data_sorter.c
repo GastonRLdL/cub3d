@@ -6,36 +6,29 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 11:02:31 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/25 14:13:54 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/06/09 20:08:27 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/cub3d.h"
+#include "../../inc/cub3D.h"
 
-int	data_sorter(char **split, int *stored, t_data *data)
+int	data_sorter(char **split, int *stored, t_game *game)
 {
-	if (split_size(split) == 2)
+	int	ok;
+
+	if (split_size(split) != 2)
 	{
-		if (is_texture(split))
-		{
-			if (!store_texture(split, data))
-				return ((*stored) = -1);
-			return ((*stored)++);
-		}
-		else if (is_color(split))
-		{
-			if (!store_color(split, data))
-				return ((*stored) = -1);
-			return ((*stored)++);
-		}
-		else
-		{
-			free_split(&split);
-			return ((*stored) = -1);
-		}
-		(*stored)++;
-		if (*stored == 6)
-			return (true);
+		free_split(split);
+		return ((*stored) = -1);
 	}
-	return ((*stored) = -1);
+	if (is_texture(split))
+		ok = store_texture(split, game);
+	else if (is_color(split))
+		ok = store_color(split, game);
+	else
+		ok = 0;
+	free_split(split);
+	if (!ok)
+		return ((*stored) = -1);
+	return ((*stored)++);
 }

@@ -6,11 +6,11 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 11:07:22 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/25 15:57:09 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/05/23 15:43:08 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/cub3d.h"
+#include "../../inc/cub3D.h"
 
 static short	is_empty(char *line)
 {
@@ -19,6 +19,8 @@ static short	is_empty(char *line)
 
 char	**process_line(char *line)
 {
+	char	**split;
+
 	if (is_empty(line))
 	{
 		free(line);
@@ -29,5 +31,7 @@ char	**process_line(char *line)
 		free(line);
 		return (printf("Processing Line Error\n"), NULL);
 	}
-	return (ft_split_set(line, ' ', '\t'));
+	split = ft_split_set(line, ' ', '\t');
+	free(line);
+	return (split);
 }

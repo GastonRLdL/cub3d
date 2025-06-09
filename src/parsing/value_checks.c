@@ -6,11 +6,12 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 13:21:52 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/24 16:45:42 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/05/22 15:27:02 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/cub3d.h"
+#include "../../inc/cub3D.h"
+
 
 static int	is_number(char *color)
 {
@@ -18,14 +19,14 @@ static int	is_number(char *color)
 
 	i = 0;
 	if (!color)
-		return (false);
+		return (0);
 	while (color[i])
 	{
 		if (!ft_isdigit(color[i]))
-			return (false);
+			return (0);
 		i++;
 	}
-	return (true);
+	return (1);
 }
 
 int	value_checks(char **color)
@@ -40,15 +41,15 @@ int	value_checks(char **color)
 	{
 		n = 0;
 		if (!is_number(color[i]))
-			return (printf("Color Error1\n"), false);
+			return (printf("Color Error1\n"), 0);
 		while (color[i][n])
 			n++;
 		if (n > 3)
-			return (false);
+			return (0);
 		c = ft_atoi(color[i]);
 		if (c < 0 || c > 255)
-			return (printf("Color Error2\n"), false);
+			return (printf("Color Error2\n"), 0);
 		i++;
 	}
-	return (true);
+	return (1);
 }

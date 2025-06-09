@@ -6,9 +6,11 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 12:35:55 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/24 14:04:31 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/05/14 18:15:35 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../../inc/cub3D.h"
 
 int	split_size(char **split)
 {

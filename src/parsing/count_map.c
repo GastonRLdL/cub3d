@@ -6,25 +6,26 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 14:53:05 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/27 16:42:34 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/06/09 18:49:01 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/cub3d.h"
+#include "../../inc/cub3D.h"
 
-int	count_map(t_data *data, char *line)
+
+int	count_map(t_game *game, char *line)
 {
 	static int	j = 0;
 
 	if (j == 0 && line[0] == '\n')
-		return (true);
-	data->map = \
-		ft_double_realloc(data->map, (j + 2) * sizeof(char *));
-	if (!data->map)
-		return (false);
-	data->map[j] = ft_strdup(line);
-	if (!data->map[j])
-		return (false);
+		return (1);
+	game->data->map = ft_double_realloc(game->data->map, (j + 1) * sizeof(char *));
+	if (!game->data->map)
+		return (0);
+	if (line)
+		game->data->map[j] = ft_strdup(line);
+	if (!game->data->map[j])
+		return (0);
 	j++;
-	return (true);
+	return (1);
 }

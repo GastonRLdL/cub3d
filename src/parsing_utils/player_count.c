@@ -6,11 +6,12 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 12:21:58 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/27 16:42:31 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/05/14 18:20:25 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/cub3d.h"
+#include "../../inc/cub3D.h"
+
 
 int	player_count(char c)
 {
@@ -19,6 +20,6 @@ int	player_count(char c)
 	if (c == 'N' || c == 'S' || c == 'E' || c == 'W')
 		check++;
 	if (check > 1)
-		return (false);
-	return (true);
+		return (0);
+	return (1);
 }

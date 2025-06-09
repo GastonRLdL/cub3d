@@ -6,11 +6,12 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 15:23:47 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/25 15:26:20 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/05/14 18:14:45 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/cub3d.h"
+#include "../../inc/cub3D.h"
+
 
 char	**ft_double_realloc(char **ptr, size_t new_size)
 {

@@ -6,15 +6,16 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/27 15:40:20 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/27 16:35:06 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/06/09 19:02:04 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/cub3d.h"
+#include "../../inc/cub3D.h"
 
-int	parser_map(t_data *data)
+
+int	parser_map(t_game *game)
 {
-	if (line_checker(data) == false)
-		return (false);
-	return (true);
+	if (line_checker(game) == 0)
+		return (0);
+	return (1);
 }

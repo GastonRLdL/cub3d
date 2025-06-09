@@ -6,11 +6,11 @@
 /*   By: gasroman <gasroman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/20 15:35:54 by gasroman          #+#    #+#             */
-/*   Updated: 2025/04/25 14:37:06 by gasroman         ###   ########.fr       */
+/*   Updated: 2025/05/22 17:19:22 by gasroman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/cub3d.h"
+#include "../../inc/cub3D.h"
 
 static size_t	w_size(char const *s, int start, char c1, char c2)
 {

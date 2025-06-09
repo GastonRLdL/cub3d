@@ -1,0 +1,33 @@
+WOLF3D Style Weapon Sprite Pack by AstroCreep
+6/26/19
+
+Contains:
+
+Shotgun
+Super Shotgun
+Sniper Rifle
+Angel of Death Claw
+Crossbow
+Gold Wand
+Gauntlets of the Necromancer
+Hellstaff
+Dragon Claw
+Plasma Rifle
+BFG9000
+Chainsaw
+Zorcher
+Strife Flamethrower
+Killer Eggplant
+
+Sprite Bases:
+
+Sniper Rifle based on Rifle by Turbo
+Angel of Death Claw based on Imp Claw by Bouncy
+Crossbow, Gold Wand, Gauntlets, Hellstaff and Dragon
+Claw based on weapons from Heretic
+Shotgun, Super Shotgun, Chainsaw, Plasma Rifle and
+BFG9000 based on weapons from Doom and Doom II
+Zorcher based on weapon from Chex Quest
+Flame Thrower based on weapon from Strife
+Eggplant based on Discord eggplant emoji
+Hand sprites adapted from SOD Lost Episodes
